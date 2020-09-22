@@ -1,0 +1,89 @@
+.container{
+    position:relative;
+    width:100%;
+    height:75%;
+}
+
+.container img {
+    width:100%;
+    height:75%;    
+    /* color:rgba(3, 3, 172, 0.842) */
+}
+
+
+.container .btn1{
+    position:absolute;
+    top:30%;
+    left:40%;
+    transform: translate(-50%,-50%);
+    font-size: large;
+    cursor: pointer;
+    padding:10px 10px;
+    
+    
+}
+
+.container .btn2{
+    position:absolute;
+    top:30%;
+    left:59%;
+    transform: translate(-50%,-50%);
+    font-size: large;
+    cursor: pointer;
+    padding:10px 10px;
+    
+}
+.container .login {
+    position:absolute;
+    top:3%;
+    left:85%;
+    transform: translate(-50%,-50%);
+    font-size: large;
+    cursor: pointer;
+    
+    color:rgba(21, 92, 173, 0.842);
+
+    
+}
+
+.container .sign {
+    position: absolute;
+    top:3%;
+    left:92%;
+    transform: translate(-50%,-50%);
+    font-size: large;
+    cursor: pointer;
+    
+    color:rgba(21, 92, 173, 0.842);
+
+}
+
+
+.vl {
+    border-left: 4px solid rgb(0, 92, 128);
+    height: 100px;
+  }
+.container .vl{
+    position:absolute;
+    top:30%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    padding:10px 10px;
+}
+
+.container h1{
+    position: absolute;
+    top:10%;
+    left:34%;
+    font-size:85px;
+    color:rgb(7, 68, 117);
+    font-family:"trebuchet ms";
+}
+
+.arrow{
+    top:10%;
+    left:35%;
+    align-content:"left";
+    text-align:"left";
+}
