@@ -39,49 +39,26 @@ function App() {
                 <Route exact={true} path="/"  component={Mainpage} />    
                 <Route exact={true} path="/signin" component={SignIn}/>
                 <Route exact={true} path="/signup" component={SignUp}/>
-
-
-      <div >
-
-          
+      <div >          
            <Header onToggleMenu={toggleMenu}/> 
            <div className="ui attached pushable" style={{height:650}}> 
                 <SideBar1 toggleMenu={toggle}/>
           
            <main>
            <Switch>
-                
-               
               
-                 {/* <Route exact={true} path="/construction/" component={SimpleList1}/>
-                 <Route exact={true} path="/loading/" component={SimpleList1}/>
-                 <Route exact={true} path="/farm/" component={SimpleList1}/>
-                 <Route exact={true} path="/cleaning/" component={SimpleList1}/>
-                 <Route exact={true} path="/gardening/" component={SimpleList1}/> */}
-                 <Route  exact={true} path="/cart/:id?" component={CartScreen}/>
-
-
-                 {/* <Route exact={true} path="/construction/:id" component={Cards1}/>
-                 <Route exact={true} path="/loading/:id" component={Cards1}/>
-                 <Route exact={true} path="/farm/:id" component={Cards1}/>
-                 <Route exact={true} path="/cleaning/:id" component={Cards1}/>
-                 <Route exact={true} path="/gardening/:id" component={Cards1}/> */}
-                <Route exact={true} path="/category" component={categoryScreen}/>
-                <Route exact={true} path="/ongoing/" component ={OnGoingScreen}/>
-                <Route exact={true} path="/findwork" component={FindWork}/>
-                <Route exact={true} path="/completed" component={CompletedWorks}/>
-                <Route exact={true} path="/category/:id" component={PostDetailsScreen}/>
+                <Route  path="/cart/:id?" component={CartScreen}/>
+                <Route  path="/category" component={categoryScreen}/>
+                <Route  path="/ongoing/" component ={OnGoingScreen}/>
+                <Route  path="/findwork" component={FindWork}/>
+                <Route  path="/completed" component={CompletedWorks}/>
+                <Route  path="/category/:id" component={PostDetailsScreen}/>
           </Switch>
            </main>
            </div>
 
        </div>
-          
-      
-        
       </Router>
-
-
   
     </div>
   );
