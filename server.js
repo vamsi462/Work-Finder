@@ -1,12 +1,16 @@
 const express = require("express");
+const morgan = require('morgan');
 
 const app = express();
 
 
-app.get('/',(req,res)=>{
-    res.json("hello")
-})  
+const connectDB = require('./backend/database/db'); 
+//database connection..
+connectDB()
 
+//middlewares
+
+app.use(morgan('dev'))
 
 
 const port = process.env.PORT || 9000;
