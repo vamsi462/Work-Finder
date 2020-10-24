@@ -5,12 +5,6 @@ const { read, update, userById } = require('../controllers/user')
 
 const router = express.Router()
 
-
-
-
-
-
-
 router.get('/secret/:userId', requireSignin, isAuth, isAdmin, (req, res) => {
     res.json({
         user: req.profile

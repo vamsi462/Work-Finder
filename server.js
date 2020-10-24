@@ -8,6 +8,7 @@ const connectDB = require("./backend/database/db");
 const app = express();
 const authRoutes = require('./backend/routers/auth');
 const userRoutes = require('./backend/routers/user');
+const workRoutes = require('./backend/routers/work');
 
 
 //database connection..
@@ -24,7 +25,7 @@ app.use(expressValidator());
 
 app.use('/api', authRoutes)
 app.use('/api', userRoutes)
-
+app.use('/api',workRoutes)
 
 
 const port = process.env.PORT || 9000;
