@@ -9,7 +9,6 @@ const {
 const {userById} = require('../controllers/user');
 const { create } = require('../controllers/work')
 
-router.post('/work/create/:userId',requireSignin,isAuth,isAdmin,create)
 
 router.param('userId',userById)
 
