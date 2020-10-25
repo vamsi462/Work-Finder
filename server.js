@@ -9,13 +9,15 @@ const app = express();
 const authRoutes = require('./backend/routers/auth');
 const userRoutes = require('./backend/routers/user');
 const categoryRoutes= require('./backend/routers/category');
-const workRoutes= require('./backend/routers/work');
+const workRoutes = require('./backend/routers/work');
+const cors = require('cors');
 
 
 //database connection..
 connectDB()
 
 //middlewares
+app.use(cors())
 app.use(morgan('dev'))
 app.use(bodyParser.json());
 app.use(cookieParser());
