@@ -35,6 +35,10 @@ const WorkShema = new mongoose.Schema({
         type: Number,
         required:true
     },
+    accepted:{
+        type: Number,
+        default:0
+    },
     photo: {
         data: Buffer,
         contentType: String

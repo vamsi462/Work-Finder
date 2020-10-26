@@ -141,7 +141,7 @@ exports.update = (req, res) => {
 //postedworks / newarrival 
 
 //by accepted = /works?sortBy=posted&accepted=desc&limit=4
-//by new posted = /works?sortBy=createdAt&accepted=desc&limit=4
+//by newPosted = /works?sortBy=createdAt&accepted=desc&limit=4
 //if no params are sent , then all works are returned
 
 exports.list = (req, res) => {
