@@ -40,7 +40,7 @@ const SignIn = () => {
   }
 
   const showSignInForm = () => (
-    <form className="signup-form mx-4">
+    <form className="signup-form mx-8">
       {/* email */}
       <div className="form-group input-group">
         <div className="input-group-prepend">
@@ -72,7 +72,7 @@ const SignIn = () => {
         />
       </div>
 
-      {/* signup button */}
+      {/* signin button */}
       <div className="form-group">
         <button
           type="submit"
@@ -97,29 +97,29 @@ const SignIn = () => {
     loading&&(<div className="alert alert-info"><h2>loading...</h2></div>)
   )
 
-//   const redirectUser = ()=>{
-//       if(redirectToReferrer){
-//          if(user&&user.role===1){
-//              return <Redirect to ="/admin/dashboard"/>
-//          }
-//          else{
-//              return <Redirect to ="/user/dashboard"/>
-//          }
-//       }
-//       if(isAuthenticated()){
-//           return <Redirect to ="/"/>
-//       }
-//   }
+  const redirectUser = ()=>{
+      if(redirectToReferrer){
+         if(user&&user.role===1){
+             return <Redirect to ="/admin/dashboard"/>
+         }
+         else{
+             return <Redirect to ="/user/dashboard"/>
+         }
+      }
+      if(isAuthenticated()){
+          return <Redirect to ="/"/>
+      }
+  }
   return (
     <Layout
       Layout
       title="Signin"
-      description="Signin to Restaurant"
+      description = "Signin to WorkFinder"
       className="container col-md-8 offset-md-2">
       {showError()}
       {showLoading()}
       {showSignInForm()}
-      
+      {redirectUser()}
     </Layout>
   );
 };

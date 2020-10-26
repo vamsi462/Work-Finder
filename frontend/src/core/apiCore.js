@@ -21,7 +21,7 @@ export const getCategories = () => {
     .catch((err) => console.log(err))
 }
 
-export const getFilteredProducts = (skip, limit, filters = {}) => {
+export const getFilteredWorks = (skip, limit, filters = {}) => {
 
   const data = {
     limit,
@@ -57,8 +57,8 @@ export const list = params => {
     .catch(err => console.log(err));
 };
 
-export const read = productId => {
-  return fetch(`${API}/product/${productId}`, {
+export const read = workId => {
+  return fetch(`${API}/work/${workId}`, {
       method: "GET"
     })
     .then(response => {
@@ -66,8 +66,8 @@ export const read = productId => {
     })
     .catch(err => console.log(err));
 }
-export const listRelated = productId => {
-  return fetch(`${API}/products/related/${productId}`, {
+export const listRelated = workId => {
+  return fetch(`${API}/works/related/${workId}`, {
       method: "GET"
     })
     .then(response => {

@@ -20,6 +20,15 @@ const Menu = ({history}) => {
               Home
             </Link>
           </li>
+          <li className="nav-item">
+            <Link Link style = {
+              isActive(history, "/worksByCategories")
+            }
+            className = "nav-link"
+            to = "/worksByCategories" >
+              Store
+            </Link>
+          </li>
        
         {isAuthenticated()&&isAuthenticated().user.role===0&& (
           
