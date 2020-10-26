@@ -24,7 +24,7 @@ const  WorkProviderDashBoard = () => {
               <Link className="nav-link" to ="/workProvider/orders">View Accepted Works</Link>
           </li>
           <li className="list-group-item">
-              <Link className="nav-link" to ="/workProvider/products">Manage Prodcts</Link>
+              <Link className="nav-link" to ="/workProvider/products">Manage Works</Link>
           </li>
            {/* <li className="list-group-item">
               <Link className="nav-link" to ="/workProvider/products">Manage Prodcts</Link>
