@@ -3,22 +3,18 @@ import Layout from './Layout'
 import { read, listRelated } from './apiCore';
 import Card from './Card';
 
-const Product = (props) => {
-     const [product, setProduct] = useState({});
-     const [relatedProduct, setRelatedProduct] = useState([]);
+const Work = (props) => {
+     const [work, setWork] = useState({});
+     const [relatedWork, setRelatedWork] = useState([]);
      const [error, setError] = useState(false);
-    const loadSingleProduct = productId => {
-        read(productId).then(data => {
-            if (data.error) {
-                setError(data.error);
-            } else {
-                setProduct(data);
-                // fetch related products
+    const loadSingleWork = workId => {
+        read(workId).then(data => {
+           if (data){
+                setWork(data);
+                // fetch related works
                 listRelated(data._id).then(data => {
-                    if (data.error) {
-                        setError(data.error);
-                    } else {
-                        setRelatedProduct(data);
+                   if(data) {
+                        setRelatedWork(data);
                     }
                 });
             }
@@ -26,27 +22,27 @@ const Product = (props) => {
             
     }
     useEffect(() => {
-            const productId = props.match.params.productId;
-            loadSingleProduct(productId);
+            const workId = props.match.params.workId;
+            loadSingleWork(workId);
     }, [props]);
 
     
     return (
         <Layout
-            title={product && product.name}
-            description={product && product.description && product.description.substring(0, 100)}
+            title={work && work.name}
+            description={work && work.description && work.description.substring(0, 100)}
             className="container-fluid"
         >
        <div className="row">
                 <div className="col-8">
-                    {product && product.description && <Card product={product} showViewProductButton={false}/>}
+                    {work && work.worktype && <Card work={work} showViewWorkButton={false}/>}
                 </div>
 
                 <div className="col-4">
-                    <h4>Related products</h4>
-                    {relatedProduct.map((p, i) => (
+                    <h4>Related works</h4>
+                    {relatedWork.map((p, i) => (
                         <div className="mb-3" key={i}>
-                            <Card product={p} />
+                            <Card work={p} />
                         </div>
                         
                     ))} 
@@ -58,4 +54,4 @@ const Product = (props) => {
     )
 }
 
-export default Product
+export default Work

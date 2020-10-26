@@ -10,6 +10,7 @@ import Profile from "./Profile";
 import Cart from "../core/Cart";
 import AdminRoute from "../auth/AdminRoute";
 import WorkProviderDashBoard from "../WorkerProvider/WorkProvideDashBoard";
+import Work from "../core/Work";
 
 const Routes = () => {
         return ( 
@@ -18,11 +19,12 @@ const Routes = () => {
                 <Route exact path="/" component={Home} />
                 <Route exact path="/signup" component={SignUp} />
                 <Route  path ="/signin"  exact component={SignIn}/>
-                         <Route  path="/cart" exact component={Cart} />
-                 <Route exact path="/worksByCategories" component={WorksStore} />
-                  <PrivateRoute path="/user/dashboard" exact component={Dashboard}/>
-                  <PrivateRoute path="/profile/:userId" exact component={Profile}/>
-                  <AdminRoute path="/workprovider/dashboard" exact component={WorkProviderDashBoard}/>
+                <Route  path="/cart" exact component={Cart} />
+                 <Route  path="/work/:workId"  exact component={Work} />
+                <Route exact path="/worksByCategories" component={WorksStore} />
+                <PrivateRoute path="/user/dashboard" exact component={Dashboard}/>
+                <PrivateRoute path="/profile/:userId" exact component={Profile}/>
+                <AdminRoute path="/workprovider/dashboard" exact component={WorkProviderDashBoard}/>
 
             </Switch>
     </BrowserRouter>
