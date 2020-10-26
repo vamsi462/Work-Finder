@@ -11,6 +11,7 @@ import Cart from "../core/Cart";
 import AdminRoute from "../auth/AdminRoute";
 import WorkProviderDashBoard from "../WorkerProvider/WorkProvideDashBoard";
 import Work from "../core/Work";
+import ManageWorks from "../WorkerProvider/ManageWorks";
 
 const Routes = () => {
         return ( 
@@ -25,7 +26,7 @@ const Routes = () => {
                 <PrivateRoute path="/user/dashboard" exact component={Dashboard}/>
                 <PrivateRoute path="/profile/:userId" exact component={Profile}/>
                 <AdminRoute path="/workprovider/dashboard" exact component={WorkProviderDashBoard}/>
-
+                 <AdminRoute path="/workprovider/works" exact component={ManageWorks}/>
             </Switch>
     </BrowserRouter>
   );

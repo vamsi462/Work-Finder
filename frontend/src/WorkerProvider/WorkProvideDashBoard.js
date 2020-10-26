@@ -24,7 +24,7 @@ const  WorkProviderDashBoard = () => {
               <Link className="nav-link" to ="/workProvider/orders">View Accepted Works</Link>
           </li>
           <li className="list-group-item">
-              <Link className="nav-link" to ="/workProvider/products">Manage Works</Link>
+              <Link className="nav-link" to ="/workprovider/works">Manage Works</Link>
           </li>
            {/* <li className="list-group-item">
               <Link className="nav-link" to ="/workProvider/products">Manage Prodcts</Link>
@@ -36,7 +36,7 @@ const  WorkProviderDashBoard = () => {
   const workProviderInfo =()=>{
       return (
         <div className="card mb-5">
-          <h3 className="card-header">workProvider Information</h3>
+          <h3 className="card-header">WorkProvider Information</h3>
           <ul className="list-group">
             <li className="list-group-item">{name}</li>
             <li className="list-group-item">{email}</li>
