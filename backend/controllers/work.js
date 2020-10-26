@@ -215,7 +215,7 @@ exports.listBySearch = (req, res) => {
 
   for (let key in req.body.filters) {
     if (req.body.filters[key].length > 0) {
-      if (key === "price") {
+      if (key === "wage") {
         findArgs[key] = {
           $gte: req.body.filters[key][0],
           $lte: req.body.filters[key][1]
@@ -258,7 +258,7 @@ exports.photo = (req, res, next) => {
 exports.listSearch = (req, res) => {
   const query = {};
   if (req.query.search) {
-    query.name = {
+    query.worktype = {
       $regex: req.query.search,
       $options: 'i'
     };
@@ -266,7 +266,7 @@ exports.listSearch = (req, res) => {
     if (req.query.category && req.query.category != 'All') {
       query.category = req.query.category;
     }
-    work.find(query, (err, works) => {
+    Work.find(query, (err, works) => {
       if (err) {
         return res.status(400).json({
           error: errorHandler(err)

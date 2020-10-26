@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Layout from './Layout'
 import { getWorks } from './apiCore'
 import Card from './Card'
+import Search from './Search'
 
 const Home = () => {
         const [worksByAccepted, setWorksByAccepted] = useState([])
@@ -35,6 +36,7 @@ const Home = () => {
         <Layout title = "Home Page"
             description = "Find the works here!!!"
             className = "container-fluid" >
+               <Search/>
                 <div className="row">
              {worksByAccepted.map((work,i)=>(<Card key={i} work={work}/>))}
              
