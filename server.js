@@ -10,6 +10,7 @@ const authRoutes = require('./backend/routers/auth');
 const userRoutes = require('./backend/routers/user');
 const categoryRoutes= require('./backend/routers/category');
 const workRoutes = require('./backend/routers/work');
+const acceptedWorkRoutes = require('./backend/routers/acceptWork');
 const cors = require('cors');
 
 
@@ -30,6 +31,7 @@ app.use('/api', authRoutes)
 app.use('/api', userRoutes)
 app.use('/api', categoryRoutes)
 app.use('/api', workRoutes)
+app.use('/api',acceptedWorkRoutes)
 
 
 

@@ -22,11 +22,7 @@ const Shop = () => {
 
   const init = () => {
     getCategories().then((data) => {
-      if (data.error) {
-        setError(
-          data.error
-        )
-      } else {
+       if(data) {
         setCategories(data);
       }
     });
@@ -34,9 +30,7 @@ const Shop = () => {
   const loadFilteredResults = newFilters => {
     //console.log(newFilters);
     getFilteredWorks(skip, limit, newFilters).then(data => {
-      if(data.error) {
-        setError(data.error);
-      } else {
+      if(data) {
         setFilteredResults(data.data)
         setSize(data.size)
         setSkip(0)
@@ -48,9 +42,7 @@ const Shop = () => {
         let toSkip = skip + limit;
 
          getFilteredWorks(toSkip, limit, myFilters.filters).then((data) => {
-           if (data.error) {
-             setError(data.error);
-           } else {
+           if(data) {
              setFilteredResults([...filteredResults, ...data.data]);
              setSize(data.size);
              setSkip(toSkip);

@@ -53,7 +53,8 @@ const Card = ({
             showAddToCartButton && isAuthenticated() && isAuthenticated().user.role === 0 && (
             <button  onClick = {addToCart}
             className = "button is-small  is-primary   is-pulled-left " >
-                Accept Work
+                Accept Work 
+               
              </button>
       )
      );

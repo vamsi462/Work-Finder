@@ -3,6 +3,7 @@ import { getCart } from "./cartHelpers";
 import Layout from "./Layout";
 import Card from "./Card";
 import { Link } from "react-router-dom";
+import Checkout from "./checkout";
 // import Checkout from "./Checkout";
 
 const Cart = () => {
@@ -57,7 +58,7 @@ const Cart = () => {
           <hr />
           {/* <Checkout products={items}/> */}
            {/* setRun={setRun} run={run} /> */}
-         
+          <Checkout works={items}/>
 
         </div>
       </div>
