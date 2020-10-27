@@ -7,7 +7,7 @@ const {
 const CartItemSchema = new mongoose.Schema({
     work: {
         type: ObjectId,
-        ref: "Product"
+        ref: "Work"
     },
     worktype: String,
     wage: Number

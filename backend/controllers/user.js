@@ -69,3 +69,35 @@
          });
      });
  };
+
+
+ exports.addAcceptWorkToUserHistory = (req, res, next) => {
+     let history = [];
+
+     req.body.acceptWork.products.forEach(item => {
+         history.push({
+             _id: item._id,
+             worktype: item.worktype,
+             address: item.address,
+             category: item.category,
+             reqWorkers: item.count
+         });
+     });
+
+     User.findOneAndUpdate({
+         _id: req.profile._id
+     }, {
+         $push: {
+             history: history
+         }
+     }, {
+         new: true
+     }, (error, data) => {
+         if (error) {
+             return res.status(400).json({
+                 error: 'Could not update Accepted History'
+             });
+         }
+         next();
+     });
+ };
