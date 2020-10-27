@@ -1,12 +1,12 @@
 
 const {
     errorHandler
-} = require('../helpers/dbErrorHandler');
+} = require('../helpers/dbErrorHandlers');
 const { AcceptWork } = require('../models/acceptWork');
 
 exports.acceptWorkById = (req, res, next, id) => {
     AcceptWork.findById(id)
-        .populate('works.work', 'name price')
+        .populate('works.work', 'work wage')
         .exec((err, acceptWork) => {
             if (err || !acceptWork) {
                 return res.status(400).json({
@@ -37,8 +37,8 @@ exports.create = (req, res) => {
 
 exports.listAcceptWorks = (req, res) => {
     AcceptWork.find()
-        .populate('user', '_id name address')
-        .sort('-created')
+        .populate('user', '_id name ')
+        .sort('-accepted')
         .exec((err, acceptWorks) => {
             if (err) {
                 return res.status(400).json({
@@ -50,7 +50,7 @@ exports.listAcceptWorks = (req, res) => {
 };
 
 exports.getStatusValues = (req, res) => {
-    res.json(acceptWork.schema.path('status').enumValues);
+    res.json(AcceptWork.schema.path('status').enumValues);
 };
 
 exports.updateWorkStatus = (req, res) => {
