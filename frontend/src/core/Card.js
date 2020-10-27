@@ -53,7 +53,7 @@ const Card = ({
             showAddToCartButton && isAuthenticated() && isAuthenticated().user.role === 0 && (
             <button  onClick = {addToCart}
             className = "button is-small  is-primary   is-pulled-left " >
-                Accept Work 
+                Add to cart
                
              </button>
       )
@@ -79,7 +79,7 @@ const Card = ({
       <div className="box">
         <div className="media">
           <div className="media-left">
-            <figure className="image is-96x96">
+            <figure className="image is-128x128">
                <ShowImage item={work} url="work" />
             </figure>
             {shouldRedirect(redirect)}

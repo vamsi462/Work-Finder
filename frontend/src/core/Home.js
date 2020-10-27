@@ -37,10 +37,6 @@ const Home = () => {
             description = "Find the works here!!!"
             className = "container-fluid" >
                <Search/>
-                <div className="row">
-             {worksByAccepted.map((work,i)=>(<Card key={i} work={work}/>))}
-             
-        </div>
         <div className="row"> 
             {worksByPosted.map((work,i)=>(<Card key={i} work={work}/>))}
         </div>

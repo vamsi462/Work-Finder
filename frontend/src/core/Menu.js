@@ -7,17 +7,17 @@ const isActive = (history, path) => {
   if (history.location.pathname === path) {
     return {color: "#ff9900"};
   } else {
-    return {color: "#ffffff"};
+    return {color: "white"};
   }
 };
 
 const Menu = ({history}) => {
     return (
         <div>
-        <ul  className = "nav ml-auto  bg-dark " >
+        <ul className = "navbar-brand ml-auto bg-dark" >
             <li className="nav-item">
             <Link style={isActive(history, "/")} className="nav-link" to="/">
-              Home
+              Work Finder
             </Link>
           </li>
           <li className="nav-item">
@@ -38,9 +38,7 @@ const Menu = ({history}) => {
             </Link>
             <Link style={isActive(history, "/cart")} className="nav-link" to="/cart">
               Cart{" "}
-                    {/* <sup>
-                        <small className="cart-badge">{itemTotal()}</small>
-                    </sup> */}
+                   
             </Link>
             </Fragment>
           
@@ -48,11 +46,13 @@ const Menu = ({history}) => {
 
           {isAuthenticated()&&isAuthenticated().user.role===1&& (
             <li className="nav-item">
-            <Link Link style = {
+            <Link  style = {
               isActive(history, "/workprovider/dashboard")
               }
             className = "nav-link"
-            to = "workprovider/dashboard" >
+            to = "workprovider/dashboard"
+             >
+
             Dashboard
             </Link>
                         
@@ -62,15 +62,15 @@ const Menu = ({history}) => {
    
           {!isAuthenticated() && (
             <Fragment>
-          <li className = "nav-item" >
+          <li className = "nav-end" >
             <Link
               style={isActive(history, "/signin")}
-              className="nav-link"
+              className = "nav-link button is-primary"
               to="/signin">
               SignIn
             </Link>
           </li>
-          <li className="nav-item">
+          <li className="nav-end">
             <Link
               style={isActive(history, "/signup")}
               className="nav-link"

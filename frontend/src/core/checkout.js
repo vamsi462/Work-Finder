@@ -20,7 +20,7 @@ const Checkout = ({works}) => {
          const showCheckout = () => {
         return isAuthenticated() ?(
          <div> {
-            <Link to="/user/dashboard">
+            <Link to="/cart">
                 <button className="btn btn-primary">View Your Status</button>
             </Link>
          } </div>

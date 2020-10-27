@@ -14,6 +14,7 @@ import Work from "../core/Work";
 import ManageWorks from "../WorkerProvider/ManageWorks";
 import AddWork from "../WorkerProvider/AddWork";
 import ViewAcceptedWorks from "../WorkerProvider/ViewAcceptedWorks";
+import AddCategory from "../WorkerProvider/AddCategory";
 
 const Routes = () => {
   return (
@@ -32,6 +33,7 @@ const Routes = () => {
           exact
           component={WorkProviderDashBoard}
         />
+         <AdminRoute path="/create/category" exact component={AddCategory} />
         <AdminRoute path="/workprovider/works" exact component={ManageWorks} />
         <AdminRoute path="/workProvider/acceptedWorks" exact component={ViewAcceptedWorks} />
         <AdminRoute path="/create/work" exact component={AddWork} />

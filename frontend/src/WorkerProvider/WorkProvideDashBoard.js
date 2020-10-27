@@ -33,9 +33,6 @@ const WorkProviderDashBoard = () => {
               Manage Works
             </Link>
           </li>
-          {/* <li className="list-group-item">
-              <Link className="nav-link" to ="/workProvider/products">Manage Prodcts</Link>
-          </li> */}
         </ul>
       </div>
     );

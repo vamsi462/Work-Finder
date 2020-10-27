@@ -28,8 +28,7 @@ const Cart = () => {
             cartUpdate={true}
             showRemoveWorkButton={true}
             showEditButton={true}
-            // setRun={setRun}
-            // run={run}
+  
           />
         ))}
       </div>
@@ -45,23 +44,16 @@ const Cart = () => {
 
   return (
     <Layout
-      title="Shopping Cart"
-      description="Manage your cart items. Add remove checkout or continue shopping."
+      title="Add Works To cart"
+      description="Manage your cart items. Add remove checkout or continue finding...."
       className="container-fluid">
       <div className="row">
         <div className="col-6">
           {items.length > 0 ? showItems(items) : noItemsMessage()}
         </div>
-
-        <div className="col-6">
-          <h2 className="mb-4">Your cart summary</h2>
-          <hr />
-          {/* <Checkout products={items}/> */}
-           {/* setRun={setRun} run={run} /> */}
           <Checkout works={items}/>
 
         </div>
-      </div>
     </Layout>
   );
 };

@@ -145,7 +145,7 @@ const AddWork = () => {
       <div className="form-group">
         <label className="text-muted">Req Workers</label>
         <input
-          onChange={handleChange("quantity")}
+          onChange={handleChange("reqWorkers")}
           type="number"
           className="form-control"
           value={reqWorkers}

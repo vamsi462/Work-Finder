@@ -36,9 +36,9 @@ const ViewAcceptedWorks = () => {
      const showWorksLength = () => {
         if (acceptedworks.length > 0) {
             return (
-                <h3 className="text-danger display-4">
+                <h2 className="text-danger">
                     Total works accepted by the worker: {acceptedworks.length}
-                </h3>
+                </h2>
             );
         } else {
             return <h3 className="text-danger">No Accepted orders</h3>;
@@ -107,7 +107,7 @@ const ViewAcceptedWorks = () => {
                             >
                                 <h2 className="mb-5">
                                     <span className="bg-primary">
-                                        Order ID: {o._id}
+                                        Accepted ID: {o._id}
                                     </span>
                                 </h2>
 
@@ -116,7 +116,7 @@ const ViewAcceptedWorks = () => {
                                         {showStatus(o)}
                                     </li>
                                     <li className="list-group-item">
-                                        Amount: ${o.wage}
+                                        Wage: ${o.wage}
                                     </li>
                                     <li className="list-group-item">
                                         Accepted by: {o.user.name}
@@ -128,7 +128,7 @@ const ViewAcceptedWorks = () => {
                                 </ul>
 
                                 <h3 className="mt-4 mb-4 font-italic">
-                                    Total works in the order:{" "}
+                                    Total worksAccepted:{" "}
                                     {o.works.length}
                                 </h3>
 
