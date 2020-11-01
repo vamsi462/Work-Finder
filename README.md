@@ -30,6 +30,10 @@ by going out and find the daily wage workers for the work.
 ##### Presentation
 [capstone_converted.pdf](https://github.com/vamsi462/Work-Finder/files/5471305/capstone_converted.pdf)
 
+#### Tools
+1)Vs code
+2)Trello (project Management)
+3)Slack (communication)
 
 ##### find the demo here
 
