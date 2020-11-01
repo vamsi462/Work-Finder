@@ -35,8 +35,7 @@ by going out and find the daily wage workers for the work.
 2)Trello (project Management)
 3)Slack (communication)
 
-##### find the demo here
-
-#### [https://youtu.be/5W_fRGlS3A0](url)
+##### find the demo video herer
+  https://www.youtube.com/watch?v=-OrYtUc9Cvs
 
 
