@@ -35,7 +35,9 @@ by going out and find the daily wage workers for the work.
 2)Trello (project Management)
 3)Slack (communication)
 
-##### find the demo video herer
-  https://www.youtube.com/watch?v=-OrYtUc9Cvs
+### Tech Stack
+1)MongodDB 2)Express Js 3)React Js 4)NodeJS
 
+##### find the demo video herer
+  https://www.youtube.com/watch?v=5W_fRGlS3A0
 
